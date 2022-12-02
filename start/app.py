@@ -8,6 +8,7 @@ from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'Thisisthesecretkeyvalue011'
+"""
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////mnt/c/Users/Dinah twirie/Desktop/theultimapp/database.db' 
 db = SQLAlchemy(app)
 
@@ -16,7 +17,7 @@ class User(db.Model):
     username = db.Column(db.String(15), unique=True)
     email = db.Column(db.String(50), unique=True)
     password = db.Column(db.String(80))
-
+"""
 
 class LoginForm(FlaskForm):
     username = StringField('username', validators =[InputRequired(), Length(min=4, max=15)])
@@ -61,9 +62,8 @@ def signup():
     #to save data provided by the user to the sql database...... also instead of plaintext passwd, we can use the hashed one
     if form.validate_on_submit():
         return '<h1> + form.username.data + ' ' + form.password.data + </h1>'
-       # hashed_password = generate_password_hash(form.password.data, method='sha256')
-        
-        new_user = User(username=form.username.data, email= form.email.data, password=form.password.data)
+    
+        #new_user = User(username=form.username.data, email= form.email.data, password=form.password.data)
         """
          if user:  
              if user.password == form.password.data:
