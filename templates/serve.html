@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{url_for('.static', filename='css/serve.css')}}">
+    <title>Dashboard</title>
+    <style>
+        nav a {
+            color: white;
+            font-size: 2em;
+            margin-left: 20px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="{{ url_for('index') }}">Home</a>
+        <a href="{{ url_for('dashboard') }}">Namesearch</a>
+    </nav>
+    <hr>
+<div class="content">
+    <h1>Your Name Would be...</h1>
+<form action="/login" methods="POST">
+    <div class="text_field">
+        <input type="text" required>
+        <span></span>
+        <label>Name</label>
+    </div>
+
+    <div class="text_field">
+        <input type="text" required>
+        <span></span>
+        <label>Swahili Meaning</label>
+        
+    </div>
+
+    <div class="text_field">
+        <input type="text" required>
+        <span></span>
+        <label>English Meaning</label>
+    </div>
+
+       <br>
+       <button class="submitting" type="submit">Go back</button>
+       </form>
+    </div>
+</div>
+</body>
+</html>

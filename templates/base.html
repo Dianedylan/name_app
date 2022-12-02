@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{url_for('.static', filename='css/signin.css')}}">
+    <title>{% block title %} {% endblock %} - OurNA</title>
+    <style>
+        nav a {
+            color: white;
+            font-size: 2em;
+            margin-left: 20px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="{{ url_for('index') }}">Home</a>
+        <a href="{{ url_for('index') }}">Nameapp</a>
+        <a href="{{ url_for('signup') }}">Sign up</a>
+        <a href="#">About</a>
+    </nav>
+    <hr>
+
+    <div class="content">
+        {% block content %} {% endblock %}
+    </div>
+</body>
+</html>
